@@ -21,6 +21,8 @@ print(multiples)
 #user's word : "wiiiinnnnd" ➞ "wind"
 #user's word : "ttiiitllleeee" ➞ "title"
 #user's word : "cccccaaarrrbbonnnnn" ➞ "carbon"
+
+
 user_word = input("enter a word: ")
 new_word = ""
 for char in user_word:
