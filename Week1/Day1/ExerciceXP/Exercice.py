@@ -8,7 +8,7 @@ print("hello world")
 # Exercise 2 : Some Math
 # Instructions
 #write code that calculates the result of:
-print(99**3 * 8)
+#print(99**3 * 8)
 # Exercise 3 : What Is The Output ?
 # Instructions
 # predict the output of the following code snippets:
@@ -18,7 +18,7 @@ print(3 == 3) # True
 print(3 == "3") # False
 
 #typeError: '>' not supported between instances of 'str' and 'int'
-print("Hello" == "hello") # False
+#print("Hello" == "hello") # False
 # Exercise 4: Your computer brand
 # Instructions
 # create a variable called computer_brand which value is the brand of your computer
@@ -82,4 +82,4 @@ if height > 145:
 else:
     print("you need to grow some more to ride")
 
-    
+
