@@ -114,7 +114,7 @@ zara_info = {
 }
 print(zara_info)
 
-#Create a dictionary called brand with the provided data.#Modifiez et accédez au dictionnaire comme suit :
+#Create a dictionary called brand with the provided data.
 #Modify and access the dictionary as follows:
 #Change the value of number_stores to 2.
 #Print a sentence describing Zara’s clients using the type_of_clothes key.
@@ -125,16 +125,22 @@ print(zara_info)
 #Print the major colors in the US.
 #Print the number of keys in the dictionary.
 #Print all keys of the dictionary.
+
 zara_info["number_stores"] = 2
 print(f"zara sells {zara_info['country_creation']} {zara_info['type_of_clothes']} clothes")
 zara_info["country_creation"] = "spain"
 if "international_competitors" in zara_info:
     zara_info["international_competitors"].append("desigual")
-    zara_info.pop("creation_date")
+
+zara_info.pop("creation_date")
+
+def new_func(zara_info):
     print(zara_info["international_competitors"][-1])
     print(zara_info["major_color"]["US"])
     print(len(zara_info))
     print(zara_info.keys())
+
+new_func(zara_info)
 
 #Bonus:
 #Create another dictionary called more_on_zara with creation_date and number_stores. Merge this dictionary with the original brand dictionary and print the result.
@@ -153,12 +159,12 @@ print(zara_info)
 #This function should accept two parameters: city and country.
 #Give the country parameter a default value, such as “Unknown”.
 def describe_city(city, country="unknown"):
-    return f"{city} is in {country}."
+    print(f"{city} is in {country}.")
+    describe_city("Reykjavik", "Iceland")
 #Step 2: Print a Message
 #Inside the function, set up the code to display a sentence like “ is in “.
 #Replace <city> and <country> with the parameter values.
-def describe_city(city, country ):
-    print(f"{city} is in {country}.")
+    describe_city("Paris")
 #Step 3: Call the Function
 #Call the describe_city() function with different city and country combinations.
 #Try calling it with and without providing the country argument to see the default value in action.
@@ -317,6 +323,7 @@ def main():
     month = int(input("Enter the month (1-12): "))
     temp = get_random_temp(month)
     print(f"The temperature right now is {temp:.2f} degrees Celsius.")
+
     if temp < 0:
         print("Brrr, that’s freezing! Wear some extra layers today.")
     elif 0 <= temp < 16:
@@ -327,6 +334,7 @@ def main():
         print("A bit warm, stay hydrated.")
     else:
         print("It’s really hot! Stay cool.")
+main()
 
 #Exercise 8: Pizza Toppings
 #Key Python Topics:
