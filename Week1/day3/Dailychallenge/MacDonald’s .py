@@ -1,42 +1,43 @@
-# What You'll learn
-# Classes and Objects
-# Dictionaries
-# String Formatting
-# Methods
-# List manipulation and sorting
+# Ce que vous apprendrez
+# Classes et objets, Dictionnaires, Formatage de chaînes, Méthodes, Manipulation et tri des listes
 
-# Key Python Topics:
-# Classes and Objects
-# Dictionaries
-# String Formatting
-# Methods
-# List manipulation (sorted())
-# Conditional logic (if)
-# String concatenation
+# Instructions : La ferme du vieux MacDonald
+# On vous fournit un exemple de code et son résultat.
+# Votre tâche consiste à créer une classe Farm qui produit le même résultat.
 
-# Instructions: Old MacDonald's Farm
 
-# Step 1: Create the Farm Class
+# Étape 1 : Créer la classe Ferme
+# Créez une classe appelée Farm.
+# Cette classe représentera une ferme et ses animaux.
+
 class Farm:
-    def __init__(self, farm_name):
-        self.name = farm_name
-        self.animals = []
+    pass
 
-macdonald = Farm("McDonald")
-print(macdonald.name)
-print(macdonald.animals)
 
-# Step 2: Implement the __init__ Method
+# Étape 2 : Implémenter la méthode __init__
+# La classe Farm devrait avoir une méthode __init__.
+# Elle prend un paramètre : farm_name.
+# À l'intérieur de __init__, créez deux attributs :
+# - name : pour stocker le nom de la ferme
+# - animals : initialisé comme un dictionnaire vide
+
 class Farm:
     def __init__(self, farm_name):
         self.name = farm_name
         self.animals = {}
 
 macdonald = Farm("McDonald")
-print(macdonald.name)
-print(macdonald.animals)
+print(macdonald.name)    # McDonald
+print(macdonald.animals) # {}
 
-# Step 3: Implement the add_animal Method
+
+# Étape 3 : Mettre en œuvre la méthode add_animal
+# Créez une méthode appelée add_animal.
+# Elle prend deux paramètres : animal_type et count (valeur par défaut de 1).
+# Si animal_type existe déjà dans le dictionnaire, incrémentez son compteur de count.
+# Sinon, ajoutez-le comme nouvelle clé avec count comme valeur.
+# Exemple de dictionnaire : {'cow': 1, 'pig': 3, 'horse': 2}
+
 class Farm:
     def __init__(self, farm_name):
         self.name = farm_name
@@ -52,9 +53,15 @@ macdonald = Farm("McDonald")
 macdonald.add_animal("cow")
 macdonald.add_animal("pig", 3)
 macdonald.add_animal("horse", 2)
-print(macdonald.animals)
+print(macdonald.animals) # {'cow': 1, 'pig': 3, 'horse': 2}
 
-# Step 4: Implement the get_info Method
+
+# Étape 4 : Mettre en œuvre la méthode get_info
+# Créez une méthode appelée get_info.
+# Elle retourne une chaîne affichant le nom de la ferme, les animaux et leur nombre,
+# ainsi que la phrase "E-I-E-I-O!".
+# Utilisez le formatage de chaînes pour aligner les noms et le nombre d'animaux.
+
 class Farm:
     def __init__(self, farm_name):
         self.name = farm_name
@@ -80,17 +87,34 @@ macdonald.add_animal("sheep")
 macdonald.add_animal("goat", 12)
 print(macdonald.get_info())
 
-# Step 5: Test Your Code
+
+# Étape 5 : Testez votre code
+# Créez un objet Farm et appelez les méthodes add_animal et get_info.
+# Vérifiez que le résultat correspond à l'exemple fourni.
+
 macdonald = Farm("McDonald")
 macdonald.add_animal("cow", 5)
 macdonald.add_animal("sheep")
 macdonald.add_animal("sheep")
 macdonald.add_animal("goat", 12)
 print(macdonald.get_info())
+# Output:
+# McDonald's farm
+#
+# cow : 5
+# goat : 12
+# sheep : 2
+#
+#     E-I-E-I-O!
 
-# Bonus: Expand The Farm
 
-# Step 6: Implement the get_animal_types Method
+# Bonus : Agrandissez la ferme
+
+# Étape 6 : Mettre en œuvre la méthode get_animal_types
+# Ajoutez une méthode get_animal_types à la classe Farm.
+# Elle retourne une liste triée de tous les types d'animaux (clés du dictionnaire animals).
+# Utilisez la fonction sorted() pour trier la liste.
+
 class Farm:
     def __init__(self, farm_name):
         self.name = farm_name
@@ -118,9 +142,16 @@ macdonald.add_animal("sheep")
 macdonald.add_animal("sheep")
 macdonald.add_animal("goat", 12)
 print(macdonald.get_info())
-print(macdonald.get_animal_types())
+print(macdonald.get_animal_types()) # ['cow', 'goat', 'sheep']
 
-# Step 7: Implement the get_short_info Method
+
+# Étape 7 : Mettre en œuvre la méthode get_short_info
+# Ajoutez une méthode get_short_info à la classe Farm.
+# Elle retourne une chaîne comme "McDonald's farm has cows, goats and sheeps."
+# Appelez get_animal_types pour obtenir la liste des animaux.
+# Ajoutez un "s" au nom de l'animal si son nombre est supérieur à 1.
+# Utilisez le formatage de chaînes pour créer le résultat.
+
 class Farm:
     def __init__(self, farm_name):
         self.name = farm_name
@@ -160,9 +191,14 @@ macdonald.add_animal("sheep")
 macdonald.add_animal("goat", 12)
 print(macdonald.get_info())
 print(macdonald.get_animal_types())
-print(macdonald.get_short_info())
+print(macdonald.get_short_info()) # McDonald's farm has cows, goats and sheeps.
 
-# Step 8: Upgrade the add_animal Method with **kwargs
+
+# Étape 8 : Mettre à jour la méthode add_animal avec **kwargs
+# Utilisez **kwargs pour passer plusieurs animaux en une seule fois.
+# Les clés seront le nom de l'animal et les valeurs, la quantité.
+# Exemple d'appel : macdonald.add_animal(cow=5, sheep=2, goat=12)
+
 class Farm:
     def __init__(self, farm_name):
         self.name = farm_name
