@@ -1,0 +1,26 @@
+[
+    {
+        "Student_ID":101,
+        "Name":"Alice",
+        "Course":"Data Science",
+        "Grade":95
+    },
+    {
+        "Student_ID":102,
+        "Name":"Bob",
+        "Course":"Web Dev",
+        "Grade":88
+    },
+    {
+        "Student_ID":103,
+        "Name":"Charlie",
+        "Course":"Data Science",
+        "Grade":92
+    },
+    {
+        "Student_ID":104,
+        "Name":"David",
+        "Course":"AI Engineering",
+        "Grade":85
+    }
+]
